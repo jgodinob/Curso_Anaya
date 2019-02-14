@@ -8,50 +8,6 @@ Este va a ser el objetivo del tema, dominar cada uno de estos conceptos y variab
 
 [Volver al inicio](#-Primeros-Pasos)
 
-## LET Y CONST
-
----------------------------------------------------------------------------
-
-[Volver al inicio](#-Primeros-Pasos)
-
-### LET
-
----------------------------------------------------------------------------
-
-La variable tipo `let`, a diferencia de `var` no puede ser accesible más allá de su **scope**.
-
-```js
-(function() {
-    console.log(global); // undefined
-    console.log(local); // undefined
-    if(true) {
-        var global = "Soy global";
-        let local = "Soy solo local";
-    }
-    console.log(global); // Soy global
-    console.log(local); //undefined
-})();
-```
-
-Podemos observar como fuera del scope `if(true){…}`, la variable definida con `let` no existe, mientras que la definida con `var`, ha sido asignada al objeto raíz `window` por lo que podemos usarla como una variable global fuera de su scope.
-
-[Volver al inicio](#-Primeros-Pasos)
-
-### CONST
-
----------------------------------------------------------------------------
-
-De forma análoga a otros lenguajes, se ha definido un tipo de variable que **solo puede asignarse en su declaración, y no puede ser modificada**.
-
-```js
-const URL = 'www.mydomain.com';
-URL = 'Loquesea'; // ERROR!!
-``` 
-
-Como en el resto de javascript, si se define dentro de un scope, solo pertenecerá a ese scope.
-
-[Volver al inicio](#-Primeros-Pasos)
-
 ## SET Y GET
 
 ---------------------------------------------------------------------------

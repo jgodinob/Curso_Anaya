@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+	    <title>Trabajando con informacion Css</title>
+	    <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+	</head>
+
+	<script type="text/javascript">
+    /*
+     * Seleccionamos la variable global 'document' y cuando se 
+     * haya leido ejecutamos la función.
+     **/	    	
+		$("document").ready(function(){
+			// extraemos información css del elemento
+	    	$("#a1").html("<label>Height: " + $("#imagen").height() + "</label>");
+	    	$("#a2").html("<label>Width: " + $("#imagen").width() + "</label>");
+	    	$("#a3").html("<label>InnerWidth: " + $("#imagen").innerWidth() + "</label>");
+	   		$("#a4").html("<label>InnerHeight: " + $("#imagen").innerHeight() + "</label>");
+	   		$("#a5").html("<label>OuterWidth: " + $("#imagen").outerWidth() + "</label>");
+	   		$("#a6").html("<label>OuterHeight: " + $("#imagen").outerHeight() + "</label>");
+	   		$("#a7").html("<label>Offset: " + $("#imagen").offset().top + ", "+ $("#imagen").offset().left + "</label>");
+	    	$("#a8").html("<label>Position: " + $("#imagen").position().top + ", " + $("#imagen").position().left + "</label>");
+	    });
+	</script>
+	<style type="text/css">
+	    .estilo{
+	    	width: 182px;
+	   		height: 192px;
+	   		border: 5px solid yellow;
+	   		margin-left: 10px;
+	   		margin-top: 15px;
+	   	}
+	   	.letras{
+	   		margin-left: 15px;
+	   		font-size: 14pt;
+	   	}
+	</style>
+	<body>
+		<h3 style = "margin-left:15px">Usando informacion CSS</h3>
+	   	<img id = "imagen" class = "estilo" src="imagenes/fondo1.gif">
+	    </br>
+	    </br>
+	    <div class = "letras" id = "a1"></div>
+	   	<div class = "letras" id = "a2"></div>
+	   	<div class = "letras" id = "a3"></div>
+	   	<div class = "letras" id = "a4"></div>
+	   	<div class = "letras" id = "a5"></div>
+	   	<div class = "letras" id = "a6"></div>
+	   	<div class = "letras" id = "a7"></div>
+	   	<div class = "letras" id = "a8"></div>	 
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <title>Encadenamiento de Funciones</title>
+    <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+  </head>
+  <script type="text/javascript">
+    /*
+     * Seleccionamos la variable global 'document' y cuando se 
+     * haya leido ejecutamos la función.
+     **/	
+    $("document").ready(function(){
+    // extraemos un listado de los elementos con etiqueta 'p'
+    	//alert('Existen'+ $('p').size() + 'elementos de tipo<p>');
+    // extraemos un listado de los elementos con etiqueta 'li'
+    	/*var elementos = $('li').get();
+    	alert('Existen'+ elementos.length + 'elementos de tipo<li>');*/
+    /* extraemos un listado de los elementos con etiqueta 'ul' 
+     * y dentro cambiamos el css de los elementos 'li' con clase '.b'
+     **/
+    	//$('ul').find('li.b').css('border', '2px solid blue');
+    	var borde = 2;
+    /* extraemos un listado de los elementos con etiqueta 'ul'
+     * y hacemos un bucle con ellos
+     **/
+    	$('p').each(function(){
+    // cambiamos el css de cada uno de los elementos
+    		$(this).css('border', borde+'px solid blue');
+    		borde = borde + 1;
+    	});
+    });
+  </script>
+  <style type="text/css">
+    .a{
+    color:#008000;
+    }
+    .b{
+    color:#FF0000;
+    }
+  </style>
+  <body>
+    <ul id = "listaElementos">
+      <li class = "a"><label class='a'>Elemento 1</label></li>
+      <li class = "b">Elemento 2</li>
+      <li class = "c">Elemento 3</li>
+    </ul>
+    <p class = "a">Parrafo 1</p>
+    <p class = "b">Parrafo 2</p>
+    <p class = "c">Parrafo 3</p>
+  </body>
+</html>

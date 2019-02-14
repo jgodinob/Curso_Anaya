@@ -1,0 +1,68 @@
+ @font-face {
+    font-family: 'starwars';
+    src: url('fonts/stjedise-webfont.eot');
+    src: url('fonts/stjedise-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/stjedise-webfont.woff2') format('woff2'),
+         url('fonts/stjedise-webfont.woff') format('woff'),
+         url('fonts/stjedise-webfont.ttf') format('truetype'),
+         url('fonts/stjedise-webfont.svg#starjedi_special_editionRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+ h1 {
+  font-family: starwars, arial;
+  font-weight: normal;
+  color: #fff;
+ }
+ body {
+  background: black;
+  margin: 0;
+ }
+
+ h1 {
+  font-size: 1.5em;
+ }
+
+ p {
+  color: white;
+  font-size: 2em;
+ }
+
+ p span {
+  font-size: 2rem;
+ }
+
+ li {
+  text-align: left;
+  color: #fff;
+  font-size: .7rem;
+ }
+
+
+ span {
+  color: white;
+  font-family: starwars;
+  font-size: 30vh;
+  line-height: 100vh;
+  text-align: center;
+  display: block;
+ }
+
+  p {
+    line-height: 1.5;
+    text-transform: capitalize;
+    text-align: justify;
+  }
+
+  div {
+    width: 300px;
+    height: 100px;
+    background: yellow;
+    font-size: 3em;
+    text-align: center;
+    line-height: 100px;
+    text-transform: capitalize;
+    letter-spacing: 20px;
+  }
+

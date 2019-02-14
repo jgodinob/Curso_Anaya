@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <title>Vinculando y Desvinculando Eventos</title>
+    <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+  </head>
+	<script type="text/javascript">
+		// funcion autoejecutada que inspecciona dos eventos
+    $(function(){
+    	$("#divPrueba").on("mouseover mouseleave", cambiarCSS);
+    	$("#divPrueba").on("click", removerEvento);
+    });
+		// función que cambia el css
+    function cambiarCSS(evt){
+			// alternamos la clase
+    	$("#divPrueba").toggleClass('resaltado');
+    }
+		// función que elimina un posible evento
+    function removerEvento(evt){
+    	$("#divPrueba").off("mouseover mouseleave");
+    }
+  </script>
+  <style type="text/css">
+    .normal{
+    background-color: lightblue;
+    width: 250px;
+    height: 260px;
+    margin-left: 15%;
+    text-align: center;
+    font-size: 16pt;
+    }
+    .resaltado{
+    background-color: red;
+    }
+  </style>
+  <body>
+    <h1> Vinculando y Desvinculando Eventos </h1>
+    <div id = "divPrueba" class = "normal">Arrastra el mouse al div para cambiar de color</div>
+  </body>
+</html>

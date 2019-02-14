@@ -1,0 +1,31 @@
+body {
+    /*background: grey;*/
+}
+.alerta {
+    background: red;
+    color: white;
+}
+
+#titulo {
+    color: blue;
+}
+
+.menu.header {
+  background: green;
+}
+
+ul ul a {
+  /*color: red;*/
+}
+h1, p, ul {
+  font-size: 20px;
+}
+.level-1 {
+    color: red;
+}
+.level-2 {
+  color: green;
+}
+
+
+ 

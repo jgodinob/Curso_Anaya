@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <title>Encerrando, Reemplazando y Removiendo Contenido</title>
+    <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+  </head>
+  <script type="text/javascript">
+    /*
+     * Seleccionamos la variable global 'document' y cuando se 
+     * haya leido ejecutamos la función.
+     **/	    
+    $("document").ready(function(){
+      // sustituye las etiquetas hijas por la siguientes con los atributos designados
+      // $('li').wrap('<div style="color:green"/>')
+      // vacia el contenido del elemento con etiqueta 'ul'
+      //$('ul').empty();
+      // sustituye el contenido en elos elementos con etiqueta 'p'
+     	//$('<button>Es un boton Nuevo</button>').replaceAll('p');
+     });
+  </script>
+  <style type="text/css">
+    .a{
+    color: red;
+    }
+    .b{
+    color: blue;
+    }
+  </style>
+  <body>
+    <ul id = "listaElementos">
+      <li>Elemento 1</li>
+      <li>Elemento 2</li>
+      <li>Elemento 3</li>
+    </ul>
+    <p class = "a">Parrafo 1</p>
+    <p class = "b">Parrafo 2</p>
+    <p class = "c">Parrafo 3</p>
+  </body>
+</html>

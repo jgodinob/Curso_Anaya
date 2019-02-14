@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <title>Encadenamiento de Funciones</title>
+    <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+  </head>
+  <script type="text/javascript">
+    /*
+     * Seleccionamos la variable global 'document' y cuando se 
+     * haya leido ejecutamos la función.
+     **/	  
+    $("document").ready(function(){
+      // devolvemos el listado de elementos dentro del encontrado
+    	alert( 'Los componente de la lista son: ' + $('#listaElementos').html());
+      var nuevoElemento = '<h1>Nuevo Elemento</h1>';
+      // sustituimos el elemento designado por el nuevo
+      $('li.b').html(nuevoElemento);
+      // extraemos el texto de un elemento
+      alert('El texto del Parrafo con clase b es '+ $('p.b').text());
+      // sustituimos el contenido de un elemento
+      // $('li').text('Elemento de Tipo li');	
+    });
+  </script>
+  <style type="text/css">
+    .a{
+    color:#008000;
+    }
+    .b{
+    color:#FF0000;
+    }
+  </style>
+  <body>
+    <ul id = "listaElementos">
+      <li class = "a">Elemento 1</li>
+      <li class = "b">Elemento 2</li>
+      <li class = "c">Elemento 3</li>
+    </ul>
+    <p class = "a">Parrafo 1</p>
+    <p class = "b">Parrafo 2</p>
+    <p class = "c">Parrafo 3</p>
+  </body>
+</html>

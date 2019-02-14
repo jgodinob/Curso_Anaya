@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <title>Encadenamiento de Funciones</title>
+    <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+  </head>
+  <script type="text/javascript">
+		/*
+		 * Seleccionamos la variable global 'document' y cuando se 
+		 * haya leido ejecutamos la función.
+		 **/	  
+    $("document").ready(function(){
+     /* extraemos el elemento con id 'listaElementos'
+      * y hacemos dos búsquedas para cambiar el css del elementos encontrado
+      **/      
+    	$('#listaElementos').find('li.a').find('.aa').css('border', '2px solid blue');
+    });
+  </script>
+  <style type="text/css">
+    .a{
+    color:#008000;
+    }
+    .b{
+    color:#FF0000;
+    }
+  </style>
+  <body>
+    <ul id = "listaElementos">
+      <li class = "a"><label class = 'aa'>Elemento 1</label></li>
+      <li class = "b"><label class = 'bb'>Elemento 2</label></li>
+      <li class = "c"><label class = 'cc'>Elemento 3</label></li>
+    </ul>
+    <p class = "a">Parrafo 1</p>
+    <p class = "b">Parrafo 2</p>
+    <p class = "c">Parrafo 3</p>
+  </body>
+</html>

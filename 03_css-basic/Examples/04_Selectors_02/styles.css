@@ -1,0 +1,30 @@
+h1 ~ p {
+  color: red;
+}
+
+h2 + div p {
+  color: green;
+}
+
+/*Se puede indicar solo el atributo*/
+[class] {
+  /*color: red;*/
+}
+
+/*O el atributo y su valor*/
+[target="_blank"] {
+  font-style: italic;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img[src$="png"]{
+  border: 2px solid black;
+}
+
+[class*="parrafo"] {
+  color: red;
+}

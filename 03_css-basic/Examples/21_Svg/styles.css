@@ -1,0 +1,25 @@
+.vector {
+  width: 500px;
+  height: 300px;
+  border: 2px solid black;
+  margin: auto;
+  display: block;
+}
+
+ circle {
+  fill: none;
+  stroke: green;
+  stroke-width: 10px;
+  stroke-dasharray: 628px;
+  stroke-dashoffset: 50px;
+  animation: borde 6s linear infinite;
+ }
+
+ @keyframes borde {
+  from {
+    stroke-dashoffset: 628px;
+  }
+  to {
+    stroke-dashoffset: 50px;
+  } 
+ }

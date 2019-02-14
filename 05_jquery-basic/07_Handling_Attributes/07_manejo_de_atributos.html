@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+	    <title>Encadenamiento de Funciones</title>
+	    <script type="text/javascript" src="jquery-1.10.2.min.js"></script>
+	</head>
+  <script type="text/javascript">
+    /*
+     * Seleccionamos la variable global 'document' y cuando se 
+     * haya leido ejecutamos la función.
+     **/	    
+		$("document").ready(function(){
+      // busca un elemento con etiqueta 'img' y extrae el atributo 'src'
+	    alert('El atributo src de img es: '+ $('img').attr('src'));
+      // busca un elemento con etiqueta 'img' y sustituye el atributo 'src'
+	    $('img').attr("src", 'imagenes/fondo2.jpg');
+      // busca un elemento con etiqueta 'img' y sustituye el atributo 'src'
+	   	$('img').attr({src:'imagenes/fondo2.jpg', title: 'fondo 2'});
+      // busca un elemento con etiqueta 'a' y sustituye el atributo 'href'
+	   	$('a').attr('href', 'imagenes/fondo2.jpg');
+      // busca un elemento con etiqueta 'a' y elimina el atributo 'href'
+	   	$('a').removeAttr('href');
+	  });
+	</script>
+	<style type="text/css">
+		.estilo1{
+	    	width:300px;
+	    }
+	</style>
+	<body>
+		<a href='imagenes/fondo1.gif'>
+			<img src="imagenes/fondo1.gif" class = 'estilo1' title='fondo1'>
+		</a>
+	</body>
+</html>

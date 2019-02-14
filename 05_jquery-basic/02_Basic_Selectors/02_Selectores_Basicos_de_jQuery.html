@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Selectores de Jquery</title>
+		<script type="text/javascript" src='jquery-1.10.2.min.js'></script>
+	</head>
+	<script type="text/javascript">
+		/*
+		 * Seleccionamos la variable global 'document' y cuando se 
+		 * haya leido ejecutamos la función.
+		 **/
+		$("document").ready(function(){
+			// selecciona los elementos con etiqueta 'li' y les cambia el estilo css
+			//$('li').css('border', '3px solid blue');
+			// selecciona los elementos con clase 'a' y les cambia el estilo css
+			//$('.a').css('border', '3px solid blue');
+			// selecciona los elementos con etiqueta 'li' y clase 'a' y les cambia el estilo css
+			//$('li, .b').css('border', '3px solid blue');
+			// selecciona los elementos con id 'elementoLista' y les cambia el estilo css
+			//$('#elementoLista').css('border', '3px solid blue');
+			// selecciona los elementos con etiqueta 'p' adyacente a un 'ul' y les cambia el estilo css
+			$('ul~p').css('border', '3px solid blue');
+
+		});
+	</script>
+	<style>
+		.estilo1{
+	    	width: 400px;
+	    	clear:both;
+	    }
+	    .estilo2{
+	    	position:absolute;
+	    	left: 150px;
+	   		width: 200px;
+	   	}
+	</style>
+	<body>
+			<ul>
+	    	<li class = 'a' id = 'elementoLista'>Elemento 1</li>
+	   		<li class = 'b'>Elemento 2</li>
+	    	<li class = 'c'>Elemento 3</li>
+	    </ul>
+	    <p class = "a">Parrafo 1</p>
+	    <p class = "b">Parrafo 2</p>
+	    <p class = "c">Parrafo 3</p>
+	</body>
+</html>

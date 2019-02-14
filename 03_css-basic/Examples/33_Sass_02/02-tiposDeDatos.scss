@@ -1,0 +1,78 @@
+/* 
+  7 tipos de datos
+
+  Numeros
+  Strings
+  Colores
+  Booleans
+  Null
+  Lists
+  Maps
+
+ */
+
+ // Numeros
+.data-number {
+  $var: 100px;
+  type: type-of($var); 
+  value: $var;
+}
+
+// Strings
+.data-string {
+  // $number: 100;
+  // $numberUnit: $number * 1px;
+  $var: 100 + px;
+  type: type-of($var); 
+  width: $var / 20 ;
+}
+
+// colores
+.data-color {
+  $var: rgba(255,3,21,0.5);
+  type: type-of($var); 
+  value: $var;
+}
+
+//Booleans
+.data-bool {
+  $var: 10 == 5;
+  type: type-of($var); 
+  value: $var;
+}
+
+// Null
+.data-bool {
+  $var: null;
+  type: type-of($var); 
+  value: $var;
+}
+
+// List
+.data-list {
+  $var: Hola mundo, Adios mundo;
+  type: type-of($var); 
+  value: $var;
+  length: length($var);
+  first-value: nth($var,1);
+  second-value: nth($var,2);
+}
+
+
+// Maps
+.social-button {
+  $networks-colors: (
+    facebook: blue,
+    youtube: red,
+    twitter: lightblue,
+    instagram: arco-iris,
+    ed: steelblue
+  );
+  // type: type-of($networks-colors);
+  // value: map-get($networks-colors,twitter);
+  @each $social, $color in $networks-colors {
+    &.#{$social}{
+      background-color: $color;
+    }
+  }
+}

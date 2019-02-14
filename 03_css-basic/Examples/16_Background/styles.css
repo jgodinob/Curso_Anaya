@@ -1,0 +1,107 @@
+[class^="bg-"] {
+box-sizing: border-box;
+width: 200px;
+height: 150px;
+border: 1px solid black;
+float: left;
+margin: .5em;
+}
+
+/* Background-color*/
+.bg-color {
+  background-color: green;
+}
+
+/*background-image*/
+.bg-image {
+  background-image: url(img/land.jpg);
+}
+
+/* background-size */
+.bg-size {
+  background-image: url(img/land.jpg);
+  /*background-size: 100px 100px;*/
+  /*background-size: 100%;*/
+  /*background-size: auto;*/
+  /*background-size: cover;*/
+  background-size: contain;
+}
+
+
+/*background-position*/
+.bg-position {
+  background-image: url(img/bird1.png), url(img/bird2.png);
+  background-size: 50%;
+  background-position: right bottom, left top;
+  background-repeat: no-repeat;
+}
+
+/* 
+  background-repeat: 
+    repeat (default)
+    no-repeat
+    repeat-x
+    repeat-y
+*/
+
+/* background-attachment
+    scroll
+    fixed
+*/
+.bg-attachment {
+  background-image: url(img/land2.jpg);
+  background-attachment: fixed;
+  background-size: 700px
+}
+
+body {
+  padding-bottom: 100em;
+  /*background-image: url(img/land.jpg);*/
+  background-attachment: fixed;
+  background-size: 700px
+}
+
+/* 
+  background-origin y background-clip
+*/
+
+.bg-clip {
+  border: 10px dotted black;
+  padding: 20px;
+  background-color: pink;
+  /* background-clip: border-box | padding-box | content-box */
+  background-clip: content-box;
+}
+
+
+.bg-origin {
+  border: 10px dotted black;
+  background-image: url(img/bird1.png);
+  background-color: yellow;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-origin: border-box;
+  background-clip: padding-box;
+}
+
+ .bg-multiple {
+  background-image: url(img/bird1.png), 
+                    url(img/bird2.png),
+                    url(img/land.jpg);
+  background-size: 40%, 50%, cover;
+  background-repeat: no-repeat;
+  background-position: right center, 0 0, 0 0;
+ }
+
+
+/* 
+  shorthand background:;
+*/
+
+.bg-shorthand {
+  background: 
+    right center / 40% url(img/bird1.png) no-repeat,
+    0 0 / 50% url(img/bird2.png) no-repeat,
+    0 0 / cover url(img/land.jpg);
+}

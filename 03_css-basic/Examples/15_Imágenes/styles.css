@@ -1,0 +1,8 @@
+.img-container {
+  display: table;
+}
+
+p {
+  display: table-cell;
+  vertical-align: middle;
+}

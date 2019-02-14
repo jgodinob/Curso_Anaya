@@ -1,0 +1,61 @@
+// Definir un mixin
+// crearlo: @mixin
+// usarlo: @include
+
+
+@mixin button($line-height,$font-size,$display:inline-block){
+  // c odigo del mixin
+  display: $display;
+  line-height: $line-height;
+  font-size: $font-size;
+  padding: 0 1em;
+}
+
+.button {
+  // @include button($font-size:150em,$line-height:50);
+}
+
+// .widget {
+//   @include widget($padding: 1em, 
+//                   $bg-color: red, 
+//                   $text-color: blue, 
+//                   $margin: 10px, 
+//                   $font-size.8em,
+//                   $header-font:sans-serif,$header-display: table)
+// }
+
+@mixin widget($padding,$header-font,$header-color){
+  display: block;
+  padding: $padding;
+  @at-root{
+    header#{&}  {
+      font-family: $header-font;
+      color: $header-color;
+    }
+  }
+}
+
+.widget {
+  @include widget(1em,Arial,blue);
+}
+
+$shadows: 1px solid red, 2px solid blue, 5px solid white, 10px solid yellow;
+
+@mixin multiple($box-shadow...){
+  box-shadow: $box-shadow;
+}
+
+.box {
+  @include multiple($shadows);
+}
+
+// Pasar contenido al mixin
+
+@mixin menu(){
+  list-style: none;
+  @content;
+}
+
+.menu {
+  @include menu;
+}

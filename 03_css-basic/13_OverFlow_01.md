@@ -1,0 +1,17 @@
+# OverFlow
+
+La propiedad `overflow` determina la visbilidad del contenido que desborde del contenedor.
+
+* `overflow:`
+    * `visible` (default)
+    * `hidden`, oculta el contenido desbordado
+    * `auto`, crea scroll de ser necesario
+    * `scroll`, crea scroll siempre
+
+**Novedades en CSS3**
+* `overflow-x`
+* `overflow-y`
+
+Además se pueden pasar dos valores a overflow: `overflow: valorX valorY;`
+
+[Volver al inicio](#-OverFlow)

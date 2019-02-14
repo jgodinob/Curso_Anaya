@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Selectores y Filtros por Formulario</title>
+		<script type="text/javascript" src='jquery-1.10.2.min.js'></script>
+	</head>
+	<script type="text/javascript">
+		/*
+		 * Seleccionamos la variable global 'document' y cuando se 
+		 * haya leido ejecutamos la función.
+		 **/	
+		$("document").ready(function(){
+			// selecciona el input tipo text dentro del formulario y coloca antes...
+			$('form :text').before('Es un Texto');
+			// selecciona el input tipo password dentro del formulario y coloca antes...
+			$('form :password').before('Password');
+			// selecciona el input tipo radio[checked=checked] dentro del formulario y coloca antes...
+			$('form :radio[checked=checked]').before('Seleccionado');
+			// selecciona el input tipo submit dentro del formulario y modifica su css
+			$('form :submit').css('border','2px solid blue');
+		});
+	</script>
+	<style>
+	    .estilo1{
+	   		width: 400px;
+	   		clear:both;
+	   	}
+	   	.estilo2{
+	   		position:absolute;
+	   		left: 150px;
+	   		width: 200px;
+    	}
+    </style>
+	<body>
+		<form>
+			<tbody>
+
+				<tr class="estilo1">
+	    	 		<td  class="estilo2">
+	    	 			<label>FORMULARIO DE PRUEBA</label>
+	    			</td>
+	   	 		</tr>
+	    	 	</br>
+	    	 	</br>
+	    	 	<tr class="estilo1">
+	    	 		<td  class="estilo2">
+	    	 			<label>Nombre:</label>
+	    			</td>
+	    	 		<td>
+	    	 			<input class="estilo2" type="text" value=""/>
+	    			</td>
+	   	 		</tr>
+	    	 	</br>
+	    	 	</br>
+	    		<tr class="estilo1">
+	    	 		<td  class="estilo2">
+	    	 			<label>Apellido:</label>
+	    	 		</td>
+	    	 		<td  class="estilo2">
+	    	 			<input class="estilo2" type="text" value=""/>
+	    	 		</td>
+	    	 	</tr>
+	    	 	</br>
+	    	 	</br>
+	    	 	<tr class="estilo1">
+	    	 		<td  class="estilo2">
+	    	 			<label>Usuario:</label>
+	    	 		</td>
+	    	 		<td>
+	    	 			<input class="estilo2" type="text" value=""/>
+	    			</td>
+	   	 		</tr>
+	    	 	</br>
+	    	 	</br>
+	    	 	<tr class="estilo1">
+	    	 		<td  class="estilo2">
+	    	 			<label>Contrase&ntilde;a:</label>
+	    	 		</td>
+	    	 		<td>
+	    	 			<input class="estilo2" type="password" value=""/>
+	    	 		</td>
+	    	 	</tr>
+	    	 	</br>
+	    		</br>
+	   	 		<tr class="estilo1">
+	    	 		<td  class="estilo2">
+	    	 			<label>Genero:</label>
+	    	 		</td>
+	    	 		<td>
+	    				<input name = "genero" type="radio" value="" style="margin-left:90px;"/>M</>
+	   	 				<input name = "genero" type="radio" value="" checked='checked'/>F</>
+	   	 			</td>
+	     		</tr>
+	     		</br>
+	     		</br>
+	     		<tr class="estilo1">
+	    	 		<td  class="estilo2">
+	    				<label>Acciones de Interes:</label>
+	   	 			</td>
+	   	 			<td>
+	    	 			<input style="margin-left:15px;" name = "genero" type="checkbox" value=""/>Comer</>
+	    				<input name = "genero" type="checkbox" value=""/>Dormir</>
+	   	 				<input name = "genero" type="checkbox" value=""/>Bailar</>
+	   	 			</td>
+	   	 		</tr>
+	   	 		</br>
+	   	 		</br>
+    	 		<tr class="estilo1">	    	 			
+	    	 		<td>
+	    	 			<input style="margin-left:150px" type="submit" value="Guardar"/>
+	    	 		</td>
+	    		</tr>
+	    	</tbody>
+	    </form>
+	</body>
+</html>

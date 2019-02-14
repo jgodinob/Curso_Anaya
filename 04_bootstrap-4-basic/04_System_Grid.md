@@ -60,7 +60,7 @@ El sistema de cuadrícula Bootstrap 4 tiene cinco clases:
 * `*.col-sm-` (dispositivos pequeños: ancho de pantalla igual o superior a `576 px`)
 * `*.col-md-` (dispositivos medianos - ancho de pantalla igual o mayor que `768px`)
 * `*.col-lg-` (dispositivos grandes - ancho de pantalla igual o mayor que `992px`)
-* `*.col-xl-` (dispositivos `.col-xl-` : ancho de pantalla igual o superior a `.col-xl-` )
+* `*.col-xl-` (dispositivos `.col-xl-` : ancho de pantalla igual o superior a `.col-lg-` )
 
 Las clases anteriores se pueden combinar para crear diseños más dinámicos y flexibles.
 

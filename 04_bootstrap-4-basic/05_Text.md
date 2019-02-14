@@ -18,7 +18,7 @@ Además, todos los elementos `<p>` tienen `margin-top: 0` y `margin-bottom: 1rem
 
 ---------------------------------------------------------------------------
 
-**Bootstrap 4** estilos de encabezados HTML ( <h1> a <h6> ) con un `font-weight` más audaz y un tamaño de fuente aumentado:
+**Bootstrap 4** estilos de encabezados HTML ( `<h1>` a `<h6>` ) con un `font-weight` más audaz y un tamaño de fuente aumentado:
 
 **Ejemplo**
 

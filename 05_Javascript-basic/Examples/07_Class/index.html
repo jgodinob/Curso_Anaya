@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>test es6 modules</title>
+</head>
+<body>
+  <h1>Test de los módulos ES6</h1>
+  <script>
+    class Coordenada {
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
+      }
+    }
+    var testCoordenada = new Coordenada(8,55);    
+    console.log(testCoordenada.x);
+    class Coordenada3D extends Coordenada {
+      constructor(x, y, z) {
+        super(x, y);
+        this.z = z;
+      }
+    }
+    var testCoordenada3D = new Coordenada3D(30,55,9);  
+
+    console.log(testCoordenada3D.x);
+    console.log(testCoordenada3D.z); 
+  </script>
+</body>
+</html>
